@@ -114,6 +114,7 @@ public class MeterCarloGavazziEm300Impl extends AbstractOpenemsModbusComponent
 								new SignedDoublewordElement(300005 - offset)
 										.wordOrder(WordOrder.LSWMSW),
 								SCALE_FACTOR_2)),
+				
 				new FC4ReadInputRegistersTask(300013 - offset, Priority.HIGH, //
 						m(ElectricityMeter.ChannelId.CURRENT_L1,
 								new SignedDoublewordElement(300013 - offset).wordOrder(WordOrder.LSWMSW)),
