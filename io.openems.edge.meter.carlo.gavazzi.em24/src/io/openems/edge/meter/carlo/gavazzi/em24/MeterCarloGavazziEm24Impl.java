@@ -113,7 +113,7 @@ public class MeterCarloGavazziEm24Impl extends AbstractOpenemsModbusComponent
 						m(ElectricityMeter.ChannelId.VOLTAGE_L3, new SignedDoublewordElement(300005 - offset).wordOrder(WordOrder.LSWMSW), SCALE_FACTOR_2)),
 						
 
-				new FC3ReadRegistersTask(300041 - offset, Priority.LOW, 
+				new FC3ReadRegistersTask(300041 - offset, Priority.HIGH, 
 						m(ElectricityMeter.ChannelId.ACTIVE_POWER, new SignedDoublewordElement(300041 - offset).wordOrder(WordOrder.LSWMSW), SCALE_FACTOR_MINUS_1_AND_INVERT_IF_TRUE(this.config.invert()))));
 						
 					
